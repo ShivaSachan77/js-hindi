@@ -29,10 +29,33 @@
 // console.log(obj);
 // console.log(heros);
 
-const myFunction = function(){
-    console.log("Hello world");
+// const myFunction = function(){
+//     console.log("Hello world");
     
+// }
+// console.log(typeof myFunction);
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++ MEMORY ++++++++++++++++++++++++++++++++++++++++++++++++=
+// Stack (primitive) whenever stack memory is used we get the copy of variable, Heap (Non primitive)when heap memory is used we get
+// reference of original value
+let myName = "rannvijaySachan"
+let anotherName = "shivasachan"
+anotherName = "SHADOW"
+console.log(anotherName);//copy of original value  was given to anotherName 
+console.log(myName);//original value remains untacked
+
+let userOne = {
+    name: "Shiva",
+    email: "shiva@gmail.com"
 }
-console.log(typeof myFunction);
+//non primitive will be in heap
+let userTwo = userOne
+
+console.log(userTwo);
+userTwo.email = "rannvijay@gmail.com"
+console.log(userOne);
+console.log(userTwo);
 
 
